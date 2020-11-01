@@ -5,6 +5,13 @@ function inicio() {
     //el.addEventListener("touchcancel", handleCancel);
     el.addEventListener("touchmove", handleMove);
     el.addEventListener("click", ()=>alert("click"));
+
+    if(window.DeviceOrientationEvent)
+        window.addEventListener("deviceorientation",orientacion);
+        //primero chequeamos si el navegador soporta la orientacion, entonces 
+        //se lo aplicamos a window
+    else
+        alert("No soporta las funciones de orientacion");
   }
   
   window.onload=inicio;
@@ -29,4 +36,8 @@ function handleMove(evt) {
     document.getElementById("log").innerHTML="touchmove "+evt.touches[0].pageX+" "+evt.touches[0].pageY;
 }
 
-
+function orientacion(e){
+    document.getElementById("log").innerHTML+="<br>Alpha: "+e.alpha;
+    document.getElementById("log").innerHTML+="<br>Beta: "+e.beta;
+    document.getElementById("log").innerHTML+="<br>Gamma: "+e.gamma;
+}
