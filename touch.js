@@ -13,7 +13,7 @@ function inicio() {
 
 function handleStart(evt) {
     evt.preventDefault();
-    document.getElementById("log").innerHTML="touchstar"+evt.touches[0].pageX+" "+evt.touches[0].pageY;
+    document.getElementById("log").innerHTML="touchstar "+evt.touches[0].pageX+" "+evt.touches[0].pageY;
 }
 //touchEvent (evento)
     //touches (ArrayList con los objetos touch)
@@ -26,7 +26,7 @@ function handleEnd(evt) {
 }
 function handleMove(evt) {
     evt.preventDefault();
-    document.getElementById("log").innerHTML="touchmove"+evt.touches[0].pageX+" "+evt.touches[0].pageY;
+    document.getElementById("log").innerHTML="touchmove "+evt.touches[0].pageX+" "+evt.touches[0].pageY;
 }
 
 
