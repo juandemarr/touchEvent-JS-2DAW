@@ -13,15 +13,20 @@ function inicio() {
 
 function handleStart(evt) {
     evt.preventDefault();
-    document.getElementById("log").innerHTML="touchstar";
+    document.getElementById("log").innerHTML="touchstar"+evt.touches[0].pageX+" "+evt.touches[0].pageY;
 }
+//touchEvent (evento)
+    //touches (ArrayList con los objetos touch)
+        //touch (Objeto)
+            //pageX (coord x)
+            //pageY
 function handleEnd(evt) {
     evt.preventDefault();
     document.getElementById("log").innerHTML="touchend";
 }
 function handleMove(evt) {
     evt.preventDefault();
-    document.getElementById("log").innerHTML="touchmove";
+    document.getElementById("log").innerHTML="touchmove"+evt.touches[0].pageX+" "+evt.touches[0].pageY;
 }
 
 
