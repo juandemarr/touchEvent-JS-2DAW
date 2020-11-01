@@ -6,12 +6,13 @@ function inicio() {
     el.addEventListener("touchmove", handleMove);
     el.addEventListener("click", ()=>alert("click"));
 
-    if(window.DeviceOrientationEvent)
+    if(window.DeviceOrientationEvent){
         window.addEventListener("deviceorientation",orientacion);
         //primero chequeamos si el navegador soporta la orientacion, entonces 
         //se lo aplicamos a window
-    else
-        alert("No soporta las funciones de orientacion");
+    }else{
+        document.getElementById("log").innerHTML+="No soporta la orientacion";
+    }
   }
   
   window.onload=inicio;
